@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <!-- <form action="{% url 'create' %}">이거 제출ㄹ하면 엑션 실행
+            <h4>제목: </h4>
+            <input type="text" name="title">
+            <br>
+            <br>
+            <h4>본문: </h4>
+            <textarea cols=40 rows=10 name="body"></textarea>
+            <br>
+            <br>
+            <input class = "btn btn-dark" type="submit" value="제출하기">
+        </form> -->
+    <form method="POST">
+    {% csrf_token%}
+    <table>
+        {{form.as_table}}
+    </table>
+    <br>
+        <input class="btn btn-dark" type="submit" value="제출하기">
+    </form>
+{%endblock%}    
