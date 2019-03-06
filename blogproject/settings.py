@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','d=g_*+fqur@!@(ftp0cp8vnj)qcjw4x
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
-DEBUG = bool(os.environ.get('DJANGO_DEBUG',TRUE))
+DEBUG = bool(os.environ.get('DJANGO_DEBUG',True))
 ALLOWED_HOSTS = ['*']
 
 
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'blogproject.wsgi.application'
+
 
 
 # Database
@@ -136,6 +136,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #media 파일들이 어디로 모일것인지를 쓰는 곳   
 
 MEDIA_URL = '/media/'
+
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
